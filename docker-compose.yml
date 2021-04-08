@@ -1,0 +1,13 @@
+version: '3'
+services: 
+    nginx_to_hot_reload:
+        build:
+          context: .
+          dockerfile: Dockerfile
+          # args:
+          #   - DATA_PROTOCOL=https://
+          #   - DATA_SERVER=iomt.visualinspection.iomt.pub.ibm.gsc
+          #   - NGINX_PORT=8081
+        container_name: nginx_to_hot_reload
+        ports:
+        - "3000:3000"
